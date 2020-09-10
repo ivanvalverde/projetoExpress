@@ -1,5 +1,5 @@
 const express = require('express');
-const rotas = require('./src/rotas.js')
+const rotas = require('./src/controllers/rotas.js')
 
 const app = express();
 const port = 3000;
