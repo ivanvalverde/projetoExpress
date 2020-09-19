@@ -1,8 +1,17 @@
 const express = require('express');
-const rotas = require('./src/controllers/rotas.js')
+const rotas = require('./src/routes/rotas.js')
 
 const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors')
 const port = 3000;
+
+app.use(cors())
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+app.use('/estatico',express.static('src/public'));
 
 rotas(app);
 

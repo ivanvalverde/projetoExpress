@@ -21,6 +21,26 @@ class TarefasController{
                 .catch(erro => console.log(erro));
         })
     }
+
+    static adicionaTarefas(){
+        return ((req, res)=>{
+            const tarefasDao = new TarefasDao(bd);
+
+            tarefasDao.adiciona(req.body)
+                .then(res.redirect('/'))
+                .catch(erro => console.log(erro));
+        })
+    }
+
+    static removeTarefas(){
+        return ((req, res)=>{
+            const tarefasDao = new TarefasDao(bd);
+
+            tarefasDao.deleta(req.params.id)
+                .then(res.redirect('/'))
+                .catch(erro => console.log(erro));
+        })
+    }
 }
 
 module.exports = TarefasController;
