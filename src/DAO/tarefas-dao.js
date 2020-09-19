@@ -32,14 +32,14 @@ class TarefasDao {
 
     deleta(tarefa){
         return new Promise((resolve, reject) =>{
-            this._db.run(`DELETE FROM Tarefas WHERE id_tarefas=${tarefa}`,
+            this._db.run(`DELETE FROM Tarefas WHERE id_tarefas=?`, [tarefa],
             (err)=>{
                 if(err){
                     console.log(err);
-                    return reject(`Não foi possível remover a tarefa!`);
+                    reject(`Não foi possível remover a tarefa!`);
                 }
                 
-                resolve();
+                resolve({mensagem: "sucesso"});
             });
         });
     }

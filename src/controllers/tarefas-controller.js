@@ -37,7 +37,7 @@ class TarefasController{
             const tarefasDao = new TarefasDao(bd);
 
             tarefasDao.deleta(req.params.id)
-                .then(res.redirect('/'))
+                .then((res)=>console.log(res))
                 .catch(erro => console.log(erro));
         })
     }

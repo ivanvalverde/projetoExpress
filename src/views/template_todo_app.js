@@ -9,9 +9,9 @@
           <h5 class="card-title">${element.titulo}</h5>
           <h6 class="card-subtitle mb-2 text-muted">${element.status}</h6>
           <p class="card-text">${element.descricao}</p>
-          <a href="#" id="edit${index}" class="btn btn-primary edit">Editar</a>
-          <a href="#" id="save${index}" class="btn btn-primary save">Salvar</a>
-          <a href="#" id="delete${index}" class="btn btn-primary delete">Deletar</a>
+          <button id="edit${index}" class="btn btn-primary edit">Editar</button>
+          <button id="save${index}" class="btn btn-primary save">Salvar</button>
+          <button id="delete${index}" class="btn btn-primary delete">Deletar</button>
         </div>
       </div>`
     });
