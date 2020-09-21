@@ -9,5 +9,7 @@ app.post('/',TarefasController.adicionaTarefas());
 
 app.delete('/:id',TarefasController.removeTarefas());
 
+app.put('/update/:id',TarefasController.atualizaTarefas());
+
 }
 

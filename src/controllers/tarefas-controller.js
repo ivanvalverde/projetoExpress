@@ -41,6 +41,16 @@ class TarefasController{
                 .catch(erro => console.log(erro));
         })
     }
+
+    static atualizaTarefas(){
+        return ((req, res)=>{
+            const tarefasDao = new TarefasDao(bd);
+
+            tarefasDao.atualiza(req.params.id, req.body)
+                .then((resp)=>res.send(resp))
+                .catch(erro => console.log(erro));
+        })
+    }
 }
 
 module.exports = TarefasController;

@@ -43,6 +43,21 @@ class TarefasDao {
             });
         });
     }
+
+    atualiza(elemento, info){
+        return new Promise((resolve, reject) =>{
+            this._db.run(`UPDATE Tarefas SET titulo = ?, status= ?, descricao = ? WHERE id_tarefas=?`,
+            [info.titulo, info.status, info.descricao, elemento],
+            (err)=>{
+                if(err){
+                    console.log(err);
+                    reject(`Não foi possível atualizar a tarefa!`);
+                }
+                
+                resolve();
+            });
+        });
+    }
     
 }
 

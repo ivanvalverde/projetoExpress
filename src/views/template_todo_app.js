@@ -6,12 +6,12 @@
          cards += `<div class="card my-5 mx-3" style="width: 18rem;">
         <div class="card-body">
           <p hidden>${element.id_tarefas}</p>
-          <h5 class="card-title">${element.titulo}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">${element.status}</h6>
-          <p class="card-text">${element.descricao}</p>
-          <button id="edit${index}" class="btn btn-primary edit">Editar</button>
-          <button id="save${index}" class="btn btn-primary save">Salvar</button>
-          <button id="delete${index}" class="btn btn-primary delete">Deletar</button>
+          <h5 class="card-title" id="titulo${element.id_tarefas}">${element.titulo}</h5>
+          <h6 class="card-subtitle mb-2 text-muted" id="status${element.id_tarefas}">${element.status}</h6>
+          <p class="card-text" id="descricao${element.id_tarefas}">${element.descricao}</p>
+          <button class="btn btn-primary edit">Editar</button>
+          <button class="btn btn-primary save">Salvar</button>
+          <button class="btn btn-primary delete">Deletar</button>
         </div>
       </div>`
     });

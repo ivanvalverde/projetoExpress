@@ -1,5 +1,5 @@
 # Documentação
-Aplicativo pque facilita a organização de suas tarefas.
+Aplicativo que facilita a organização de suas tarefas.
 
 # Dependências do projeto
 
@@ -7,6 +7,10 @@ Aplicativo pque facilita a organização de suas tarefas.
 ***Express:*** Framework Web estruturado escrito em javascript que roda sobre ambiente Node.js em tempo de execução ;<br>
 ***Body-parser:*** Módulo para conversão do *body* da requisição para vários formatos;<br>
 ***Cors:*** Módulo que permite o acesso a recursos restritos na página por outros domínios.<br>
+
+## Instalação das dependências
+
+No terminal do seu editor de texto(ou em algum terminal, com o node.js instalado), para instalar todas as dependências basta digitar *npm install* (serão instaladas as versões das extensões/módulos armazenadas nos arquivos *package.json* e *package-lock.json*)<br>
 
 # Como funciona
 
