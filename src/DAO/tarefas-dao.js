@@ -39,7 +39,7 @@ class TarefasDao {
                     reject(`Não foi possível remover a tarefa!`);
                 }
                 
-                resolve({mensagem: "sucesso"});
+                resolve();
             });
         });
     }
