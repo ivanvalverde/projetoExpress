@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const cors = require('cors');
-const port = process.env.port;
+const port = process.env.PORT || 3000;
 
 app.use(cors())
 app.use(bodyParser.urlencoded({
