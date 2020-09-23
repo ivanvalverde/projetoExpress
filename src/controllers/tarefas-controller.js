@@ -47,7 +47,7 @@ class TarefasController{
             const tarefasDao = new TarefasDao(bd);
 
             tarefasDao.atualiza(req.params.id, req.body)
-                .then((resp)=>res.send(resp))
+                .then(res.redirect('/'))
                 .catch(erro => console.log(erro));
         })
     }

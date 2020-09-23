@@ -9,9 +9,8 @@
           <h5 class="card-title" id="titulo${element.id_tarefas}">${element.titulo}</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="status${element.id_tarefas}">${element.status}</h6>
           <p class="card-text" id="descricao${element.id_tarefas}">${element.descricao}</p>
-          <button class="btn btn-primary edit">Editar</button>
-          <button class="btn btn-primary save">Salvar</button>
-          <button class="btn btn-primary delete">Deletar</button>
+          <button class="btn btn-light edit">Editar</button>
+          <button class="btn btn-danger delete">Deletar</button>
         </div>
       </div>`
     });
@@ -34,7 +33,9 @@
         </nav>
         <div class="d-flex justify-content-center">
             <div class="w-50 p-4 border rounded shadow-sm"> 
-                <form class="flex-fill" action="/" method="post">
+                <form id="formHttp" class="flex-fill" action="/" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="idTarefa" value="null">
                     <div class="form-group">
                         <label for="titulo"><b>Título:</b></label>
                         <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título da tarefa">
@@ -59,6 +60,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="http://localhost:3000/estatico/deleteCard.js"></script>
+        <script src="http://localhost:3000/estatico/updateCard.js"></script>
     </body>
     </html>`
     }

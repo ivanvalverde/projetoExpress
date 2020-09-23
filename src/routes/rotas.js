@@ -12,4 +12,3 @@ app.delete('/:id',TarefasController.removeTarefas());
 app.put('/update/:id',TarefasController.atualizaTarefas());
 
 }
-
