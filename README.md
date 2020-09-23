@@ -21,6 +21,6 @@ O site disponibiliza o armazenamento no banco de dados de tarefas fornecidas pel
 ***GET:*** Rota para acesso tradicional à API com o objetivo de fazer acesso ao seu conteúdo (https://localhost:3000);<br>
 ***POST:*** Utiliza a mesma URI da rota tradicional porém com o verbo HTTP post. É realizada ao clicar no botão de adicionar um novo card de tarefas (https://localhost:3000). As informações preenchidas no card são enviadas através do corpo da requisição;<br>
 ***DELETE:*** Rota para deleção de um card previamente criado. É recebido um parâmetro através da URI que identifica o id do elemento(banco) a ser removido (https://localhost:3000/id). Esta operação é realizada ao clicar no botão deletar;<br>
-***PUT:*** Rota para edição de um card previamente criada. É recebido um parâmetro através da URI do site que identifica o elemento a ser modificado e são recebidas as informações à serem modificadas pelo corpo da requisição (rota ainda não implementada);<br>
+***PUT:*** Rota para edição de um card previamente criada. É recebido um parâmetro através da URI do site que identifica o elemento a ser modificado e são recebidas as informações à serem modificadas pelo corpo da requisição (https://localhost:3000/update/id);<br>
 
 
