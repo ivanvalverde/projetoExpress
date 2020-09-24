@@ -7,7 +7,7 @@ deleteButtons.forEach((btn)=>{
         
         if (elementoClicado.classList.contains("delete")){
             let tarefasId = elementoClicado.parentNode.childNodes[1].innerText;
-            fetch(`http://localhost:3000/${tarefasId}`, 
+            fetch(`/${tarefasId}`, 
                 {method: 'DELETE'})
                 .then(() => {elementoClicado.parentNode.parentNode.remove();})
                 .catch((err) => console.log(err));
